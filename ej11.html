@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<!-- Néstor Alfredo Lara Valdivia-->
+
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Ordenar números</title>
+		<link rel="stylesheet" type="text/css" href="estilo.css">
+	</head>
+	<body>
+	<div class="volver">
+		<a href="C:\Users\Néstor\Desktop\Sentencias de control\main.html">Volver</a>
+	</div>
+	<div class="capa"></div>
+<!------------------------------------------->
+	<div class="textoej11">
+		<h1>Ordenar números</h1>
+		<hr width="900">
+	</div>
+	<div class="contenedorformej11">
+		<form class="formej1">
+			<input type="text" id="num1ej11" required>
+			<label class="lbl-numero1ej1">
+				<span class="text-numero1ej1">
+					Número 1
+				</span>
+			</label>
+		</form>
+		<form class="formej1">
+			<input type="text" id="num2ej11" required>
+			<label class="lbl-numero1ej1">
+				<span class="text-numero1ej1">
+					Número 2
+				</span>
+			</label>
+		</form>
+		<form class="formej1">
+			<input type="text" id="num3ej11" required>
+			<label class="lbl-numero1ej1">
+				<span class="text-numero1ej1">
+					Número 3
+				</span>
+			</label>
+		</form>
+		<form class="formej1">
+			<input type="text" id="num4ej11" required>
+			<label class="lbl-numero1ej1">
+				<span class="text-numero1ej1">
+					Número 4
+				</span>
+			</label>
+		</form>
+		<form class="formej1">
+			<input type="text" id="num5ej11" required>
+			<label class="lbl-numero1ej1">
+				<span class="text-numero1ej1">
+					Número 5
+				</span>
+			</label>
+		</form>
+		<form class="formej1">
+			<input type="text" id="num6ej11" required>
+			<label class="lbl-numero1ej1">
+				<span class="text-numero1ej1">
+					Número 6
+				</span>
+			</label>
+		</form>
+		<form class="resej1">
+			<input type="text" readonly="readonly" id="resultadoej11">
+			<label class="lbl-resultadoej1">
+				<span class="text-resultadoej1">
+				</span>
+			</label>
+		</form>
+		<div class="btn-calcularej1">
+			<a onclick="ordenados()">Calcular</a>
+		</div>
+	</div>
+
+	<script>
+		function ordenados(){
+		var num1 = Number(document.getElementById("num1ej11").value);
+		var num2 = Number(document.getElementById("num2ej11").value);
+		var num3 = Number(document.getElementById("num3ej11").value);
+		var num4 = Number(document.getElementById("num4ej11").value);
+		var num5 = Number(document.getElementById("num5ej11").value);
+		var num6 = Number(document.getElementById("num6ej11").value);
+
+		let aej11 = [num1, num2, num3, num4, num5, num6];
+		aej11.sort( (a, b) => {
+			if(a == b) {
+				return 0;
+			}
+			if (a > b) {
+				return 1;
+			}
+			return -1;
+		});
+
+		document.getElementById("resultadoej11").value = aej11;
+		}
+	</script>
+	</body>
+</html>

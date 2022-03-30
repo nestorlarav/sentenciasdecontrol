@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<!-- Néstor Alfredo Lara Valdivia-->
+
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Mayor, menor y promedio</title>
+		<link rel="stylesheet" type="text/css" href="estilo.css">
+	</head>
+	<body>
+	<div class="volver">
+		<a href="C:\Users\Néstor\Desktop\Sentencias de control\main.html">Volver</a>
+	</div>
+	<div class="capa"></div>
+<!------------------------------------------->
+	<div class="textoej9">
+		<h1>Mayor, menor y promedio</h1>
+		<hr width="900">
+	</div>
+	<div class="contenedorformej1">
+		<form class="formej1">
+			<input type="text" id="num1ej9" required>
+			<label class="lbl-numero1ej1">
+				<span class="text-numero1ej1">
+					Número 1
+				</span>
+			</label>
+		</form>
+		<form class="formej1">
+			<input type="text" id="num2ej9" required>
+			<label class="lbl-numero1ej1">
+				<span class="text-numero1ej1">
+					Número 2
+				</span>
+			</label>
+		</form>
+		<form class="formej1">
+			<input type="text" id="num3ej9" required>
+			<label class="lbl-numero1ej1">
+				<span class="text-numero1ej1">
+					Número 3
+				</span>
+			</label>
+		</form>
+		<form class="resej1">
+			<input type="text" readonly="readonly" id="resultadoej9">
+			<label class="lbl-resultadoej1">
+				<span class="text-resultadoej1">
+				</span>
+			</label>
+		</form>
+	</div>
+	<div class="contenedorformej9">
+		<nav class="btn-calcularej9">
+			<a onclick="nummenor()">Menor</a>
+			<a onclick="nummayor()">Mayor</a>
+			<a onclick="promedio()">Promedio</a>
+		</nav>
+	</div>
+
+	<script>
+		function nummenor(){
+		var num1 = Number(document.getElementById("num1ej9").value);
+		var num2 = Number(document.getElementById("num2ej9").value);
+		var num3 = Number(document.getElementById("num3ej9").value);
+		
+		if (num1 <= num2 && num1 <= num3){
+			var aej9 = num1 + " es el número menor";
+		}
+		if (num2 <= num1 && num2 <= num3){
+			var aej9 = num2 + " es el número menor";
+		}
+		if (num3 <= num1 && num3 <= num2){
+			var aej9 = num3 + " es el número menor";
+		}
+		document.getElementById("resultadoej9").value = aej9;
+		}
+
+		function nummayor(){
+		var num1 = Number(document.getElementById("num1ej9").value);
+		var num2 = Number(document.getElementById("num2ej9").value);
+		var num3 = Number(document.getElementById("num3ej9").value);
+		
+		if (num1 >= num2 && num1 >= num3){
+			var aej9 = num1 + " es el número mayor";
+		}
+		if (num2 >= num1 && num2 >= num3){
+			var aej9 = num2 + " es el número mayor";
+		}
+		if (num3 >= num1 && num3 >= num2){
+			var aej9 = num3 + " es el número mayor";
+		}
+		document.getElementById("resultadoej9").value = aej9;
+		}
+
+		function promedio(){
+		var num1 = Number(document.getElementById("num1ej9").value);
+		var num2 = Number(document.getElementById("num2ej9").value);
+		var num3 = Number(document.getElementById("num3ej9").value);
+		
+		var aej9 = "Promedio: " + ((num1 + num2 + num3)/3);
+		document.getElementById("resultadoej9").value = aej9;
+		}
+	</script>
+	</body>
+</html>

@@ -1,0 +1,644 @@
+/* Néstor Alfredo Lara Valdivia */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300&family=Poppins&family=Raleway:ital,wght@1,300&display=swap');
+	*{
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		font-family: 'Poppins', sans-serif;
+	}
+	body{
+		background: url(https://www.xtrafondos.com/wallpapers/estructura-abstracta-3d-gris-oscuro-3593.jpg);
+		background-size: 100vw 100vh;
+		background-repeat: no-repeat;
+	}
+	.capa{
+		position: fixed;
+		width: 100%;
+		height: 100vh;
+		background: rgba(0,0,0,0.3);
+		z-index: -1;
+		top: 0;left: 0;
+	}
+	/*Estilos para el encabezado*/
+	.header{
+		width: 100%;
+		height: 100px;
+		position: fixed;
+		top: 0;left: 0;
+	}
+	.container{
+		width: 95%;
+		max-width: 1920px;
+		margin: auto;
+	}
+	.container .btn-menu, .logo{
+		float: left;
+		line-height:100px;
+	}
+	.container .btn-menu label{
+		color: #fff;
+		font-size: 25px;
+		cursor: pointer;
+	}
+	.logo h1{
+		color: #fff;
+		font-weight: 400;
+		font-size: 22px;
+		margin-left: 10px;
+	}
+	.container .menu{
+		float: right;
+		line-height: 100px;
+	}
+	.container .menu a{
+		display: inline-block;
+		padding: 15px;
+		line-height: normal;
+		text-decoration: none;
+		color: #fff;
+		transition: all 0.3s ease;
+		border-bottom: 2px solid transparent;
+		font-size: 15px;
+		margin-right: 5px;
+	}
+	.container .menu a:hover{
+		border-bottom: 2px solid #c7c7c7;
+		padding-bottom: 5px;
+	}
+
+	/*textos*/
+
+	.texto h1{
+		color: #fff;
+		max-width: 800px;
+		font-weight: 500;
+		font-size: 100px;
+		text-align: center;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-50%);
+
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-image: url(https://www.xtrafondos.com/wallpapers/interferencia-en-espiral-azul-8058.jpg);
+	}
+
+	.texto hr{
+		color: #fff;
+		text-align: center;
+		position: absolute;
+		top: 65%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-65%);
+	}
+
+	/*Menú*/
+	#btn-menu{
+		display: none;
+	}
+	.container-menu{
+		position: absolute;
+		background: rgba(0,0,0,0.5);
+		width: 100%;
+		height: 100vh;
+		top: 0;left: 0;
+		transition: all 500ms ease;
+		opacity: 0;
+		visibility: hidden;
+	}
+	#btn-menu:checked ~ .container-menu{
+		opacity: 1;
+		visibility: visible;
+	}
+	.cont-menu{
+		width: 100%;
+		max-width: 300px;
+		background: #1c1c1c;
+		height: 100vh;
+		position: relative;
+		transition: all 500ms ease;
+		transform: translateX(-100%);
+	}
+	#btn-menu:checked ~ .container-menu .cont-menu{
+		transform: translateX(0%);
+	}
+	.cont-menu nav{
+		transform: translateY(3.5%);
+	}
+	.cont-menu nav a{
+		display: block;
+		text-decoration: none;
+		padding: 25px;
+		color: #c7c7c7;
+		border-left: 5px solid transparent;
+		transition: all 400ms ease;
+	}
+	.cont-menu nav a:hover{
+		border-left: 5px solid #c7c7c7;
+		background: #1f1f1f;
+	}
+	.cont-menu label{
+		position: absolute;
+		right: 10px;
+		top: 10px;
+		color: #fff;
+		cursor: pointer;
+		font-size: 18px;
+	}
+
+	.volver{
+		float: right;
+		line-height: 100px;
+	}
+	.volver a{
+		display: inline-block;
+		padding: 15px;
+		line-height: normal;
+		text-decoration: none;
+		color: #fff;
+		transition: all 0.3s ease;
+		border-bottom: 2px solid transparent;
+		font-size: 20px;
+		margin-right: 50px;
+	}
+	.volver a:hover{
+		border-bottom: 2px solid #c7c7c7;
+		padding-bottom: 5px;
+	}
+
+/* Títulos */
+
+	.textoej1 h1{
+		color: #fff;
+		max-width: 800px;
+		font-weight: 500;
+		font-size: 50px;
+		text-align: center;
+		position: absolute;
+		top: 15%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-15%);
+
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-image: url(https://www.xtrafondos.com/wallpapers/interferencia-en-espiral-azul-8058.jpg);
+	}
+
+	.textoej1 hr{
+		color: #fff;
+		text-align: center;
+		position: absolute;
+		top: 25%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-25%);
+	}
+
+	.textoej2 h1{
+		color: #fff;
+		max-width: 800px;
+		font-weight: 500;
+		font-size: 50px;
+		text-align: center;
+		position: absolute;
+		top: 15%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-15%);
+
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-image: url(https://www.xtrafondos.com/wallpapers/pintura-liquida-rosa-y-morada-6504.jpg);
+	}
+
+	.textoej2 hr{
+		color: #fff;
+		text-align: center;
+		position: absolute;
+		top: 25%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-25%);
+	}
+
+	.textoej3 h1{
+		color: #fff;
+		max-width: 800px;
+		font-weight: 500;
+		font-size: 50px;
+		text-align: center;
+		position: absolute;
+		top: 15%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-15%);
+
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-image: url(https://www.xtrafondos.com/wallpapers/interferencia-en-espiral-azul-8058.jpg);
+	}
+
+	.textoej3 hr{
+		color: #fff;
+		text-align: center;
+		position: absolute;
+		top: 25%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-25%);
+	}
+
+	.textoej4 h1{
+		color: #fff;
+		max-width: 800px;
+		font-weight: 500;
+		font-size: 50px;
+		text-align: center;
+		position: absolute;
+		top: 15%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-15%);
+
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-image: url(https://www.xtrafondos.com/wallpapers/pintura-liquida-rosa-y-morada-6504.jpg);
+	}
+
+	.textoej4 hr{
+		color: #fff;
+		text-align: center;
+		position: absolute;
+		top: 25%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-25%);
+	}
+
+	.textoej5 h1{
+		color: #fff;
+		max-width: 800px;
+		font-weight: 500;
+		font-size: 50px;
+		text-align: center;
+		position: absolute;
+		top: 15%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-15%);
+
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-image: url(https://www.xtrafondos.com/wallpapers/interferencia-en-espiral-azul-8058.jpg);
+	}
+
+	.textoej5 hr{
+		color: #fff;
+		text-align: center;
+		position: absolute;
+		top: 25%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-25%);
+	}
+
+	.textoej6 h1{
+		color: #fff;
+		max-width: 800px;
+		font-weight: 500;
+		font-size: 50px;
+		text-align: center;
+		position: absolute;
+		top: 15%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-15%);
+	}
+
+	.textoej6 hr{
+		color: #fff;
+		text-align: center;
+		position: absolute;
+		top: 25%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-25%);
+	}
+
+	.textoej7 h1{
+		color: #fff;
+		max-width: 800px;
+		font-weight: 500;
+		font-size: 50px;
+		text-align: center;
+		position: absolute;
+		top: 15%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-15%);
+
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-image: url(https://www.xtrafondos.com/wallpapers/pintura-liquida-rosa-y-morada-6504.jpg);
+	}
+
+	.textoej7 hr{
+		color: #fff;
+		text-align: center;
+		position: absolute;
+		top: 25%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-25%);
+	}
+
+	.textoej8 h1{
+		color: #fff;
+		max-width: 800px;
+		font-weight: 500;
+		font-size: 50px;
+		text-align: center;
+		position: absolute;
+		top: 15%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-15%);
+
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-image: url(https://www.xtrafondos.com/wallpapers/interferencia-en-espiral-azul-8058.jpg);
+	}
+
+	.textoej8 hr{
+		color: #fff;
+		text-align: center;
+		position: absolute;
+		top: 25%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-25%);
+	}
+
+	.textoej9 h1{
+		color: #fff;
+		max-width: 800px;
+		font-weight: 500;
+		font-size: 50px;
+		text-align: center;
+		position: absolute;
+		top: 15%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-15%);
+
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-image: url(https://www.xtrafondos.com/wallpapers/pintura-liquida-rosa-y-morada-6504.jpg);
+	}
+
+	.textoej9 hr{
+		color: #fff;
+		text-align: center;
+		position: absolute;
+		top: 25%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-25%);
+	}
+
+	.textoej10 h1{
+		color: #fff;
+		max-width: 800px;
+		font-weight: 500;
+		font-size: 50px;
+		text-align: center;
+		position: absolute;
+		top: 15%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-15%);
+
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-image: url(https://www.xtrafondos.com/wallpapers/interferencia-en-espiral-azul-8058.jpg);
+	}
+
+	.textoej10 hr{
+		color: #fff;
+		text-align: center;
+		position: absolute;
+		top: 25%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-25%);
+	}
+
+	.textoej11 h1{
+		color: #fff;
+		max-width: 800px;
+		font-weight: 500;
+		font-size: 50px;
+		text-align: center;
+		position: absolute;
+		top: 15%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-15%);
+
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-image: url(https://www.xtrafondos.com/wallpapers/pintura-liquida-rosa-y-morada-6504.jpg);
+	}
+
+	.textoej11 hr{
+		color: #fff;
+		text-align: center;
+		position: absolute;
+		top: 25%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-25%);
+	}
+
+/*Animación formulario 1*/
+
+	.formej1{
+		width: 100%;
+		height: 60px;
+		max-width: 400px;
+		position: relative;
+		overflow: hidden;
+	}
+	.formej1 input{
+		width: 100%;
+		height: 100%;
+		background: none;
+		color: #fff;
+		padding-top: 20px;
+		border: none;
+		outline: 0px;
+	}
+	.formej1 .lbl-numero1ej1{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		pointer-events: none;
+		border-bottom: 1px solid #c7c7c7;
+	}
+	.formej1 .lbl-numero1ej1:after{
+		content: '';
+		position: absolute;
+		left: 0;
+		bottom: -1px;
+		width: 100%;
+		height: 100%;
+		border-bottom: 3px solid #2ecece;
+		transform: translateX(-100%);
+		transition: all 0.3s ease;
+	}
+	.text-numero1ej1{
+		position: absolute;
+		bottom: 5px;
+		left: 0;
+		transition: all 0.3s ease;
+		color: #fff;
+	}
+	.formej1 input:focus + .lbl-numero1ej1 .text-numero1ej1,.formej1 input:valid + .lbl-numero1ej1 .text-numero1ej1{
+		transform: translateY(-150%);
+		font-size: 14px;
+		color: #2ecece;
+	}
+	.formej1 input:focus + .lbl-numero1ej1:after, .formej1 input:valid + .lbl-numero1ej1:after{
+		transform: translateX(0%);
+	}
+
+	.contenedorformej1{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-50%);
+	}
+
+/*Animación formulario 2*/
+
+	.form1ej1{
+		width: 100%;
+		height: 60px;
+		max-width: 400px;
+		position: relative;
+		overflow: hidden;
+	}
+	.form1ej1 input{
+		width: 100%;
+		height: 100%;
+		background: none;
+		color: #fff;
+		padding-top: 20px;
+		border: none;
+		outline: 0px;
+	}
+	.form1ej1 .lbl-numero2ej1{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		pointer-events: none;
+		border-bottom: 1px solid #c7c7c7;
+	}
+	.form1ej1 .lbl-numero2ej1:after{
+		content: '';
+		position: absolute;
+		left: 0;
+		bottom: -1px;
+		width: 100%;
+		height: 100%;
+		border-bottom: 3px solid #2ecece;
+		transform: translateX(-100%);
+		transition: all 0.3s ease;
+	}
+	.text-numero2ej1{
+		position: absolute;
+		bottom: 5px;
+		left: 0;
+		transition: all 0.3s ease;
+		color: #fff;
+	}
+	.form1ej1 input:focus + .lbl-numero2ej1 .text-numero2ej1,.form1ej1 input:valid + .lbl-numero2ej1 .text-numero2ej1{
+		transform: translateY(-150%);
+		font-size: 14px;
+		color: #2ecece;
+	}
+	.form1ej1 input:focus + .lbl-numero2ej1:after, .form1ej1 input:valid + .lbl-numero2ej1:after{
+		transform: translateX(0%);
+	}
+
+/*Resultado*/
+
+	.resej1{
+		width: 100%;
+		height: 60px;
+		max-width: 400px;
+		position: relative;
+		overflow: hidden;
+	}
+	.resej1 input{
+		width: 100%;
+		height: 100%;
+		background: none;
+		color: #fff;
+		padding-top: 20px;
+		border: none;
+		outline: 0px;
+	}
+	.resej1 .lbl-resultadoej1{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		pointer-events: none;
+		border-bottom: 1px solid #c7c7c7;
+	}
+/*btn calcular*/
+
+	.btn-calcularej1{
+		line-height: 100px;
+		transform: translateX(25px);
+	}
+	.btn-calcularej1 a{
+		display: inline-block;
+		padding: 15px;
+		line-height: normal;
+		text-decoration: none;
+		color: #fff;
+		transition: all 0.3s ease;
+		border-bottom: 2px solid transparent;
+		font-size: 20px;
+		margin-right: 50px;
+	}
+	.btn-calcularej1 a:hover{
+		border-bottom: 2px solid #c7c7c7;
+		padding-bottom: 5px;
+		cursor: pointer;
+	}
+
+
+
+	.btn-calcularej9{
+		line-height: 100px;
+		transform: translateX(25px);
+	}
+	.btn-calcularej9 a{
+		display: inline-block;
+		padding: 15px;
+		line-height: normal;
+		text-decoration: none;
+		color: #fff;
+		transition: all 0.3s ease;
+		border-bottom: 2px solid transparent;
+		font-size: 20px;
+		margin-right: 50px;
+	}
+	.btn-calcularej9 a:hover{
+		border-bottom: 2px solid #c7c7c7;
+		padding-bottom: 5px;
+		cursor: pointer;
+	}
+
+	.contenedorformej9{
+		position: absolute;
+		top: 70%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-70%);
+	}
+
+	.contenedorformej11{
+		position: absolute;
+		top: 70%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-70%);
+	}

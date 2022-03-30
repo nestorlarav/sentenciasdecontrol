@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<!-- Néstor Alfredo Lara Valdivia-->
+
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>El menor de tres números</title>
+		<link rel="stylesheet" type="text/css" href="estilo.css">
+	</head>
+	<body>
+	<div class="volver">
+		<a href="C:\Users\Néstor\Desktop\Sentencias de control\main.html">Volver</a>
+	</div>
+	<div class="capa"></div>
+<!------------------------------------------->
+	<div class="textoej2">
+		<h1>El menor de tres números</h1>
+		<hr width="900">
+	</div>
+	<div class="contenedorformej1">
+		<form class="formej1">
+			<input type="text" id="num1ej2" required>
+			<label class="lbl-numero1ej1">
+				<span class="text-numero1ej1">
+					Número 1
+				</span>
+			</label>
+		</form>
+		<form class="form1ej1">
+			<input type="text" id="num2ej2" required>
+			<label class="lbl-numero2ej1">
+				<span class="text-numero2ej1">
+					Número 2
+				</span>
+			</label>
+		</form>
+		<form class="form1ej1">
+			<input type="text" id="num3ej2" required>
+			<label class="lbl-numero2ej1">
+				<span class="text-numero2ej1">
+					Número 3
+				</span>
+			</label>
+		</form>
+		<form class="resej1">
+			<input type="text" readonly="readonly" id="resultadoej2">
+			<label class="lbl-resultadoej1">
+				<span class="text-resultadoej1">
+				</span>
+			</label>
+		</form>
+		<div class="btn-calcularej1">
+			<a onclick="menor()">Calcular</a>
+		</div>
+	</div>
+
+	<script>
+		function menor(){
+		var num1 = Number(document.getElementById("num1ej2").value);
+		var num2 = Number(document.getElementById("num2ej2").value);
+		var num3 = Number(document.getElementById("num3ej2").value);
+		
+		if (num1 <= num2 && num1 <= num3){
+			aej2 = num1 + " es el número menor";
+		}
+		if (num2 <= num1 && num2 <= num3){
+			aej2 = num2 + " es el número menor";
+		}
+		if (num3 <= num1 && num3 <= num2){
+			aej2 = num3 + " es el número menor";
+		}
+		
+		document.getElementById("resultadoej2").value = aej2;
+		}
+	</script>
+	</body>
+</html>

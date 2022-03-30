@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<!-- Néstor Alfredo Lara Valdivia-->
+
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Positivo, negativo o cero</title>
+		<link rel="stylesheet" type="text/css" href="estilo.css">
+	</head>
+	<body>
+	<div class="volver">
+		<a href="C:\Users\Néstor\Desktop\Sentencias de control\main.html">Volver</a>
+	</div>
+	<div class="capa"></div>
+<!------------------------------------------->
+	<div class="textoej3">
+		<h1>Positivo, negativo o cero</h1>
+		<hr width="900">
+	</div>
+	<div class="contenedorformej1">
+		<form class="formej1">
+			<input type="text" id="num1ej3" required>
+			<label class="lbl-numero1ej1">
+				<span class="text-numero1ej1">
+					Número
+				</span>
+			</label>
+		</form>
+		<form class="resej1">
+			<input type="text" readonly="readonly" id="resultadoej3">
+			<label class="lbl-resultadoej1">
+				<span class="text-resultadoej1">
+				</span>
+			</label>
+		</form>
+		<div class="btn-calcularej1">
+			<a onclick="posneg()">Calcular</a>
+		</div>
+	</div>
+
+	<script>
+		function posneg(){
+		var num1 = Number(document.getElementById("num1ej3").value);
+		
+		if (num1 == 0){
+			aej2 = "El número es cero";
+		}
+		if (num1 > 0){
+			aej2 = "El número " + num1 + " es positivo";
+		}
+		if (num1 < 0){
+			aej2 = "El número " + num1 + " es negativo";
+		}
+		
+		document.getElementById("resultadoej3").value = aej2;
+		}
+	</script>
+	</body>
+</html>

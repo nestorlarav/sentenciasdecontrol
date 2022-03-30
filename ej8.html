@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<!-- Néstor Alfredo Lara Valdivia-->
+
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Signo Zodiacal</title>
+		<link rel="stylesheet" type="text/css" href="estilo.css">
+	</head>
+	<body>
+	<div class="volver">
+		<a href="C:\Users\Néstor\Desktop\Sentencias de control\main.html">Volver</a>
+	</div>
+	<div class="capa"></div>
+<!------------------------------------------->
+	<div class="textoej8">
+		<h1>Signo Zodiacal</h1>
+		<hr width="900">
+	</div>
+	<div class="contenedorformej1">
+		<form class="formej1">
+			<input type="text" id="num1ej8" required>
+			<label class="lbl-numero1ej1">
+				<span class="text-numero1ej1">
+					Número de día
+				</span>
+			</label>
+		</form>
+		<form class="formej1">
+			<input type="text" id="num2ej8" required>
+			<label class="lbl-numero1ej1">
+				<span class="text-numero1ej1">
+					Número de mes
+				</span>
+			</label>
+		</form>
+		<form class="resej1">
+			<input type="text" readonly="readonly" id="resultadoej8">
+			<label class="lbl-resultadoej1">
+				<span class="text-resultadoej1">
+				</span>
+			</label>
+		</form>
+		<div class="btn-calcularej1">
+			<a onclick="signo()">Calcular</a>
+		</div>
+	</div>
+
+	<script>
+		function signo(){
+		var num1 = Number(document.getElementById("num1ej8").value);
+		var num2 = Number(document.getElementById("num2ej8").value);
+
+		if(num1 >= 21 && num2 == 3 || num1 <= 20 && num2 == 4){
+		    var aej8 = "Aries";
+		}
+		if(num1 >= 21 && num2 == 4 || num1 <= 21 && num2 == 5){
+		    var aej8 = "Tauro";
+		}
+		if(num1 >= 22 && num2 == 5 || num1 <= 21 && num2 == 6){
+		    var aej8 = "Géminis";
+		}
+		if(num1 >= 22 && num2 == 6 || num1 <= 22 && num2 == 7){
+		    var aej8 = "Cáncer";
+		}
+		if(num1 >= 23 && num2 == 7 || num1 <= 23 && num2 == 8){
+		    var aej8 = "Leo";
+		}
+		if(num1 >= 24 && num2 == 8 || num1 <= 23 && num2 == 9){
+		    var aej8 = "Virgo";
+		}
+		if(num1 >= 24 && num2 == 9 || num1 <= 23 && num2 == 10){
+		    var aej8 = "Libra";
+		}
+		if(num1 >= 24 && num2 == 10 || num1 <= 22 && num2 == 11){
+		    var aej8 = "Escorpión";
+		}
+		if(num1 >= 23 && num2 == 11 || num1 <= 21 && num2 == 12){
+		    var aej8 = "Sagitario";
+		}
+		if(num1 >= 22 && num2 == 12 || num1 <= 20 && num2 == 1){
+		    var aej8 = "Capricornio";
+		}
+		if(num1 >= 21 && num2 == 1 || num1 <= 18 && num2 == 2){
+		    var aej8 = "Acuario";
+		}
+		if(num1 >= 19 && num2 == 2 || num1 <= 20 && num2 == 3){
+		    var aej8 = "Piscis";
+		}
+		if (num1 > 31 || num2 > 12){
+		    var aej8 = "Introduzca fecha válida";
+		}
+
+		document.getElementById("resultadoej8").value = aej8;
+		}
+	</script>
+	</body>
+</html>

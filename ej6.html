@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<!-- Néstor Alfredo Lara Valdivia-->
+
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Tienda de zapatos</title>
+		<link rel="stylesheet" type="text/css" href="estilo.css">
+	</head>
+	<style>
+		body{
+		background: url(https://www.xtrafondos.com/wallpapers/air-jordan-miles-morales-como-spiderman-6001.jpg);
+		background-size: 100vw 100vh;
+		background-repeat: no-repeat;
+	}
+
+	</style>
+	<body>
+	<div class="volver">
+		<a href="C:\Users\Néstor\Desktop\Sentencias de control\main.html">Volver</a>
+	</div>
+	<div class="capa"></div>
+<!------------------------------------------->
+	<div class="textoej6">
+		<h1>Tienda de zapatos</h1>
+		<hr width="900">
+	</div>
+	<div class="contenedorformej1">
+		<form class="formej1">
+			<input type="text" id="num1ej6" required>
+			<label class="lbl-numero1ej1">
+				<span class="text-numero1ej1">
+					Tipo de membresía
+				</span>
+			</label>
+		</form>
+		<form class="resej1">
+			<input type="text" readonly="readonly" id="resultadoej6">
+			<label class="lbl-resultadoej1">
+				<span class="text-resultadoej1">
+				</span>
+			</label>
+		</form>
+		<div class="btn-calcularej1">
+			<a onclick="membresia()">Calcular</a>
+		</div>
+	</div>
+
+	<script>
+		function membresia(){
+		var num1 = Number(document.getElementById("num1ej6").value);
+
+		if (num1 == 105){
+			aej6 = "Tiene 13% de descuento";
+		}
+		if (num1 == 206){
+			aej6 = "Tiene 22% de descuento";
+		}
+		if (num1 == 307){
+			aej6 = "Tiene 28% de descuento";
+		}
+		if (num1 != 105 && num1 != 206 && num1 != 307){
+			aej6 = "No tiene descuento";
+		}
+		
+		document.getElementById("resultadoej6").value = aej6;
+		}
+	</script>
+	</body>
+</html>

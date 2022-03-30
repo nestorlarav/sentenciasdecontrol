@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<!-- Néstor Alfredo Lara Valdivia-->
+
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Suma de números</title>
+		<link rel="stylesheet" type="text/css" href="estilo.css">
+	</head>
+	<body>
+	<div class="volver">
+		<a href="C:\Users\Néstor\Desktop\Sentencias de control\main.html">Volver</a>
+	</div>
+	<div class="capa"></div>
+<!------------------------------------------->
+	<div class="textoej10">
+		<h1>Suma de números</h1>
+		<hr width="900">
+	</div>
+	<div class="contenedorformej1">
+		<form class="formej1">
+			<input type="text" id="num1ej10" required>
+			<label class="lbl-numero1ej1">
+				<span class="text-numero1ej1">
+					Número
+				</span>
+			</label>
+		</form>
+		<form class="resej1">
+			<input type="text" readonly="readonly" id="resultadoej10">
+			<label class="lbl-resultadoej1">
+				<span class="text-resultadoej1">
+				</span>
+			</label>
+		</form>
+		<div class="btn-calcularej1">
+			<a onclick="sumados()">Calcular</a>
+		</div>
+	</div>
+
+	<script>
+		function sumados(){
+		var num1 = Number(document.getElementById("num1ej10").value);
+
+		var aej10 = num1 * (num1+1)/2;
+
+		document.getElementById("resultadoej10").value = aej10;
+		}
+	</script>
+	</body>
+</html>

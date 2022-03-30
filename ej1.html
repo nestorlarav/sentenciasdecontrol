@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<!-- Néstor Alfredo Lara Valdivia-->
+
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>El mayor de dos números</title>
+		<link rel="stylesheet" type="text/css" href="estilo.css">
+	</head>
+	<body>
+	<div class="volver">
+		<a href="C:\Users\Néstor\Desktop\Sentencias de control\main.html">Volver</a>
+	</div>
+	<div class="capa"></div>
+<!------------------------------------------->
+	<div class="textoej1">
+		<h1>El mayor de dos números</h1>
+		<hr width="900">
+	</div>
+	<div class="contenedorformej1">
+		<form class="formej1">
+			<input type="text" id="num1" required>
+			<label class="lbl-numero1ej1">
+				<span class="text-numero1ej1">
+					Número 1
+				</span>
+			</label>
+		</form>
+		<form class="form1ej1">
+			<input type="text" id="num2" required>
+			<label class="lbl-numero2ej1">
+				<span class="text-numero2ej1">
+					Número 2
+				</span>
+			</label>
+		</form>
+		<form class="resej1">
+			<input type="text" readonly="readonly" id="resultado">
+			<label class="lbl-resultadoej1">
+				<span class="text-resultadoej1">
+				</span>
+			</label>
+		</form>
+		<div class="btn-calcularej1">
+			<a onclick="mayor()">Calcular</a>
+		</div>
+	</div>
+
+	<script>
+		function mayor(){
+		var num1 = Number(document.getElementById("num1").value);
+		var num2 = Number(document.getElementById("num2").value);
+		
+		if (num1 == num2){
+			aej1 = "Los números son iguales"
+		}
+		if (num1 > num2){
+			aej1 = num1 + " es el número mayor";
+		}
+		if (num1 < num2){
+			aej1 = num2 + " es el número mayor";
+		}
+
+		document.getElementById("resultado").value = aej1;
+		}
+	</script>
+	</body>
+</html>

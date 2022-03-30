@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<!-- Néstor Alfredo Lara Valdivia-->
+
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Admisión universitaria</title>
+		<link rel="stylesheet" type="text/css" href="estilo.css">
+	</head>
+	<body>
+	<div class="volver">
+		<a href="C:\Users\Néstor\Desktop\Sentencias de control\main.html">Volver</a>
+	</div>
+	<div class="capa"></div>
+<!------------------------------------------->
+	<div class="textoej7">
+		<h1>Admisión universitaria</h1>
+		<hr width="900">
+	</div>
+	<div class="contenedorformej1">
+		<form class="formej1">
+			<input type="text" id="num1ej7" required>
+			<label class="lbl-numero1ej1">
+				<span class="text-numero1ej1">
+					Prom. bachillerato
+				</span>
+			</label>
+		</form>
+		<form class="formej1">
+			<input type="text" id="num2ej7" required>
+			<label class="lbl-numero1ej1">
+				<span class="text-numero1ej1">
+					Res. de EXANI
+				</span>
+			</label>
+		</form>
+		<form class="formej1">
+			<input type="text" id="num3ej7" required>
+			<label class="lbl-numero1ej1">
+				<span class="text-numero1ej1">
+					Res. examen
+				</span>
+			</label>
+		</form>
+		<form class="resej1">
+			<input type="text" readonly="readonly" id="resultadoej7">
+			<label class="lbl-resultadoej1">
+				<span class="text-resultadoej1">
+				</span>
+			</label>
+		</form>
+		<div class="btn-calcularej1">
+			<a onclick="univer()">Calcular</a>
+		</div>
+	</div>
+
+	<script>
+		function univer(){
+		var num1 = Number(document.getElementById("num1ej7").value);
+		var num2 = Number(document.getElementById("num2ej7").value);
+		var num3 = Number(document.getElementById("num3ej7").value);
+
+		if (num1 > 8.5 && num2 > 1050 && num3 > 800){
+			var aej7 = "Ha sido aceptado";
+		}else{
+			var aej7 = "No ha sido aceptado";
+		}
+		
+		document.getElementById("resultadoej7").value = aej7;
+		}
+	</script>
+	</body>
+</html>
